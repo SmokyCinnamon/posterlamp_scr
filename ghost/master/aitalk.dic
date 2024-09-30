@@ -1,0 +1,34 @@
+OnAiTalk
+{
+	if CHAIN.IDName == ""
+	{
+		LastTalk = RandomTalk
+	}
+	else
+	{
+		LastTalk = ChainTalk
+	}
+	LastTalk
+}
+
+//YOU ARE A MISSING SOUL TRAPPED IN A LAMP POST FOREVER
+RandomTalk : nonoverlap_pool
+{
+	"\![bind,poster,blank,0]"; -- //this is so that the poster will go away from the repeat that option in the menu
+	"\0\s[0](I'm glad for my poster covering, I think I'd be worried about the rust otherwise.)\e"
+	"\0\s[0](I miss the way my poster used to feel... what a shame it faded.)\e"
+	"\0\s[0](How empty the street is tonight. How strange.)\e"
+	"\0\s[0](Oh, a biker! Hello, biker.)\w6\n...\w6\n(Goodbye, biker. Safe travels...)\e"
+	"\0\s[0](That woman with the poster last week said her child ran away from home. But didn't I hear them saying she kicked them out...?)\w6\n\n(At least nobody can kick \f[italic,1]me\f[italic,0] out.)\e" //erm is this not a subject matter we should include .    idk it's "horror" ghost
+	"\0\s[0](Just the other day I saw that car. When will they ever replace the bumper?!)\e"
+	"\0\s[0](All these cars out so late... I wonder what they're up to?)\e"
+	"\0\s[0](\f[italic,1]Plink, plink, plink.\f[italic,0] Raiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiin.)\e"
+	"\0\s[0](I've become a man /\w3 who's forgotten all my senses /\w5 something about defenses...)\e" //fitting for the subject matter i guess. never discount what comes to you in a dream
+	"\0\s[0](I sure hope they never try to put an LED in here. I might actually die.)\e" //literally and jokingly?
+	"\0\s[0](Ah ah ah moths)\w6\n(Please go away moths or at least get eaten by the spider who has TAKEN UP RESIDENCE on me.)\e"
+	"\0\s[0](I wish someone would take down the spiderweb instead of the posters. But all they ever care about is their posters. Maybe it'll eat them someday. I wouldn't like that, but it would be justice.)\e"
+	"\0\s[0](Kitty! Please be careful around the road...)\e"
+	"\0\s[0](I wish the posters would talk to me. Hellooooooooooo posters? Hello???)\e"
+	"\0\s[0](Magic would be so cool if it was real. I guess maybe something about energy and matter prevents that. But it could be like in dungeon meshi.)\e" //says the guy trapped in a lamppost
+	"\0\s[0](Whooosh. Yet another car by on the road. Maybe I should start keeping count...)\e"
+}

@@ -1,0 +1,17 @@
+charset,UTF-8
+
+name,Community Lamppost
+type,ghost
+
+shiori,yaya.dll
+
+craftman,SmokyCinnamonRoll
+craftmanw,SmokyCinnamonRoll
+craftmanurl,https://smokycinnamon.github.io/indifferentsorrel/index.html
+
+sakura.name,Lamppost
+kero.name,NOTHING EVER
+
+icon,icon.ico
+
+sstp.allowunspecifiedsend,0

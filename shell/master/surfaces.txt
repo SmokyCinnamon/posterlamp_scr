@@ -1,0 +1,137 @@
+﻿descript
+{
+	version,1
+}
+
+//—————————————————————————————— Sakura surfaces ——————————————————————————————
+
+surface0
+{
+	element0,overlay,lamp.png,0,0
+	element1,overlay,light.png,0,0
+	collision0,0,0,130,65,head
+	
+	//Example code for blink animation - uncomment if you want it
+	//animation0.interval,random,4
+	//animation0.pattern0,overlay,101,0,0,0
+	//animation0.pattern1,overlay,102,100,0,0
+	//animation0.pattern2,overlay,-1,50,0,0
+	
+	
+	//Example code for a talk animation - uncomment if you want it
+	animation1.interval,bind+always
+	
+	animation1.pattern0,overlay,1,140,0,0
+	animation1.pattern1,overlay,2,140,0,0
+	animation1.pattern2,overlay,3,140,0,0
+	animation1.pattern3,overlay,1,140,0,0
+	animation1.pattern4,overlay,3,140,0,0
+	animation1.pattern5,overlay,2,140,0,0
+	animation1.pattern6,overlay,4,140,0,0
+	animation1.pattern7,overlay,3,140,0,0
+	
+	animation5.interval,bind
+	animation5.pattern0,overlay,5,0,0,0
+}
+
+//rain - 1 through 4
+surface1
+{
+	element0,overlay,Rain1.png,0,0
+}
+surface2
+{
+	element0,overlay,Rain2.png,0,0
+}
+surface3
+{
+	element0,overlay,Rain3.png,0,0
+}
+surface4
+{
+	element0,overlay,Rain4.png,0,0
+}
+//dim/poster element
+surface5
+{
+	element0,overlay,dim.png,0,0
+	element1,overlay,PosterBase.png,0,0
+
+	//animations 6-9, poster images
+	animation6.interval,bind
+	animation6.pattern0,overlay,6,0,0,0
+	animation7.interval,bind
+	animation7.pattern0,overlay,7,0,0,0
+	animation8.interval,bind
+	animation8.pattern0,overlay,8,0,0,0
+	animation9.interval,bind
+	animation9.pattern0,overlay,9,0,0,0
+	//animations11-17, poster text
+	animation11.interval,bind
+	animation11.pattern0,overlay,11,0,0,0
+	animation12.interval,bind
+	animation12.pattern0,overlay,12,0,0,0
+	animation13.interval,bind
+	animation13.pattern0,overlay,13,0,0,0
+	animation14.interval,bind
+	animation14.pattern0,overlay,14,0,0,0
+	animation15.interval,bind
+	animation15.pattern0,overlay,15,0,0,0
+	animation16.interval,bind
+	animation16.pattern0,overlay,16,0,0,0
+	animation17.interval,bind
+	animation17.pattern0,overlay,17,0,0,0
+}
+//poster images 6-9
+surface6
+{
+	element0,overlay,Missing1.png,0,0
+}
+surface7
+{
+	element0,overlay,Missing2.png,0,0
+}
+surface8
+{
+	element0,overlay,missing3.png,0,0
+}
+surface9
+{
+	element0,overlay,Missing4.png,0,0
+}
+//poster text - 11-17
+surface11
+{
+	element0,overlay,PosterText1.png,0,0
+}
+surface12
+{
+	element0,overlay,PosterText2.png,0,0
+}
+surface13
+{
+	element0,overlay,PosterText3.png,0,0
+}
+surface14
+{
+	element0,overlay,PosterText4.png,0,0
+}
+surface15
+{
+	element0,overlay,PosterText5.png,0,0
+}
+surface16
+{
+	element0,overlay,PosterText6.png,0,0
+}
+surface17
+{
+	element0,overlay,PosterText7.png,0,0
+}
+
+//—————————————————————————————— Kero surfaces ——————————————————————————————
+
+surface10
+{
+	//collision0,0,0,130,65,head
+}

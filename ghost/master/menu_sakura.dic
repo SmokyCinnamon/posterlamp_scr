@@ -1,0 +1,58 @@
+OnSakuraMenu : all {
+	"\![bind,faces,%(sessionFace),1]\![bind,text,%(sessionText),1]"
+	"\![bind,poster,blank,1]"
+	"\0\s[0]\b2\![set,autoscroll,disable]"
+	"\_q"
+	
+	"\![*]\q[Talk to me,OnAiTalk]"
+	if LastTalk != ""; "  \![*]\q[Say that again,OnLastTalk]"
+	"\n\n"
+	
+	//referenced from under the stars BUT i am writing all of it myself
+	_talkrate = ("Off,0","30s,30","1m,60","3m,180","5m,300","10m,600") //?
+	foreach _talkrate; _rate {
+		//listen ik its the same variable name but WHAT ELSE DO I CALL IT LOL
+		switch aitalkinterval == TOINT(_rate[1]) {
+			"\__q[OnTalkRateChange,%(_rate[1])]%(_rate[0])\__q "
+			"\f[italic,1]\_a[OnTalkRateChange,%(_rate[1])]%(_rate[0])\_a\f[italic,0] "
+			//i may change the text decoration if i don't like it :great_
+			//thumbsup:
+		}
+	}
+	"\n"
+	switch rainVar {
+		"\__q[OnToggleRain,0]Show rain (photosensitivity warning): No\__q\n"
+		"\__q[OnToggleRain,1]Show rain (photosensitivity warning): Yes\__q\n"
+	}
+	
+	//"%(sessionFace) and %(sessionText)"
+	/*foreach dressupinfo; _element {
+		"%(_element)\n"
+	}
+	foreach facesPool; _element {
+		"faces %(_element)\n"
+	}
+	foreach textPool; _text {
+		"text %(_text)\n"
+	}*/
+	
+	"\n\n\![*]\q[Nevermind,OnMenuClose]"	
+}
+
+OnLastTalk {LastTalk}
+
+OnTalkRateChange{aitalkinterval = TOINT(reference0); OnSakuraMenu}
+OnToggleRain : all {
+	if rainVar == 1; rainVar = 0
+	else; rainVar = 1
+	"\![bind,rain,,%(rainVar)]"
+	
+	OnSakuraMenu
+}
+
+OnChoiceTimeout : all {
+	"\![bind,poster,blank,0]"
+}
+OnMenuClose : all {
+	"\![bind,poster,blank,0]"
+}
