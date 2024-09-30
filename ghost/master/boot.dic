@@ -27,7 +27,7 @@ OnInitialize
 }
 
 OnBoot {
-	"\1\s[10]\0\s[0]\![bind,faces,%(sessionFace),1]\![bind,text,%(sessionText),1]"; --
+	"\1\s[10]\0\s[0]"; --
 	"(It's the community lamppost.)"
 	"(Still covered in posters.)"
 	"(Maybe there's even a new one today...)"
