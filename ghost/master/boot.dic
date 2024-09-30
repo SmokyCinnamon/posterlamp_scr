@@ -35,7 +35,7 @@ OnBoot {
 }
 
 OnClose {
-	"\1\s[10]\0\s[0]\![bind,poster,blank,1]\![bind,faces,%(sessionFace),0]\![bind,text,%(sessionText),0]"; --
+	"\1\s[10]\0\s[0]\![bind,poster,blank,0]\![bind,faces,%(sessionFace),0]\![bind,text,%(sessionText),0]"; --
 	"(Dawn is when I sleep.)"
 	"(No matter how strong my light, some days I worry I won't wake up.)"
 	"(I miss my heartbeat.)"
