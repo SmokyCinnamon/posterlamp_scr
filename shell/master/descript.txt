@@ -6,10 +6,12 @@ craftman,SmokyCinnamonRoll
 craftmanw,SmokyCinnamonRoll
 craftmanurl,https://smokycinnamon.github.io/indifferentsorrel/index.html
 
-seriko.alignmenttodesktop,free
+seriko.alignmenttodesktop,bottom
 seriko.use_self_alpha,1
 
-sakura.bindgroup1.name,rain,-
+sakura.bindgroup0.name,rain,large
+sakura.bindgroup0.default,0
+sakura.bindgroup1.name,rain,wall
 sakura.bindgroup1.default,0
 
 sakura.bindgroup5.name,poster,blank
@@ -24,19 +26,32 @@ sakura.bindgroup8.default,0
 sakura.bindgroup9.name,faces,four
 sakura.bindgroup9.default,0
 
-sakura.bindgroup11.name,text,one
+sakura.bindgroup11.name,faces,five
 sakura.bindgroup11.default,0
-sakura.bindgroup12.name,text,two
+sakura.bindgroup12.name,faces,six
 sakura.bindgroup12.default,0
-sakura.bindgroup13.name,text,three
+sakura.bindgroup13.name,faces,seven
 sakura.bindgroup13.default,0
-sakura.bindgroup14.name,text,four
+sakura.bindgroup14.name,faces,eight
+
+
 sakura.bindgroup14.default,0
-sakura.bindgroup15.name,text,five
+sakura.bindgroup15.name,text,one
 sakura.bindgroup15.default,0
-sakura.bindgroup16.name,text,six
+sakura.bindgroup16.name,text,two
 sakura.bindgroup16.default,0
-sakura.bindgroup17.name,text,seven
+sakura.bindgroup17.name,text,three
 sakura.bindgroup17.default,0
 
+sakura.bindgroup18.name,text,four
+sakura.bindgroup18,default,0
+sakura.bindgroup19.name,text,five
+sakura.bindgroup19,default,0
+sakura.bindgroup20.name,text,six
+sakura.bindgroup20,default,0
+sakura.bindgroup21.name,text,seven
+sakura.bindgroup21,default,0
+
 sakura.menu,hidden
+//sakura.menu,auto
+//for testing

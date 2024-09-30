@@ -1,13 +1,28 @@
+SakuraMenuGreetings : nonoverlap_pool {
+	"(I think I might have seen them last week. Was the poster there then...?)\n\n(Ah, they all feel the same anyways. Who knows.)"
+	"(This one looks a little scary sometimes. Everything does at night - that's why I'm here...)"
+	"(I wonder where they are?)"
+	"(Maybe someone forgot about this one. I hope that's a good thing.)"
+	"(I'm not sure how to feel about that.)"
+	"(At least it's not an ad I guess. Imagine being a standing advertisement. I'd break my light myself.)"
+	"(Were they in that car just now?)"
+	"(I think I saw this one yesterday.)"
+	"(Hope they're staying out of this rain.)"
+}
+
+
 OnSakuraMenu : all {
-	"\![bind,faces,%(sessionFace),1]\![bind,text,%(sessionText),1]"
-	"\![bind,poster,blank,1]"
-	"\0\s[0]\b2\![set,autoscroll,disable]"
-	"\_q"
+	"\![bind,faces,%(sessionFace),1]\![bind,text,%(sessionText),1]\![bind,poster,blank,1]"
+	"\0\s[0]\b2\![set,autoscroll,disable]\_q"
 	
-	"\![*]\q[Talk to me,OnAiTalk]"
-	if LastTalk != ""; "  \![*]\q[Say that again,OnLastTalk]"
+	if SHIORI3FW.Eventid == "OnMouseDoubleClick"; "%(SakuraMenuGreetings)"
+	
+	
+	"\n\n------\n\![*]\q[Talk,OnAiTalk]"
+	if LastTalk != ""; "  \![*]\q[Remember,OnLastTalk]"
 	"\n\n"
 	
+	"Talk rate: "
 	//referenced from under the stars BUT i am writing all of it myself
 	_talkrate = ("Off,0","30s,30","1m,60","3m,180","5m,300","10m,600") //?
 	foreach _talkrate; _rate {
@@ -19,10 +34,14 @@ OnSakuraMenu : all {
 			//thumbsup:
 		}
 	}
-	"\n"
-	switch rainVar {
-		"\__q[OnToggleRain,0]Show rain (photosensitivity warning): No\__q\n"
-		"\__q[OnToggleRain,1]Show rain (photosensitivity warning): Yes\__q\n"
+	"\n\n[half]Rain (flash warning): "
+	_rainType = ("Off")
+	_rainType ,= rainPool
+	foreach _rainType; _type {
+		switch rainType == _type {
+			"\__q[OnToggleRain,%(_type)]%(_type)\__q "
+			"\f[italic,1]\_a[OnToggleRain,%(_type)]%(_type)\_a\f[italic,0] "
+		}
 	}
 	
 	//"%(sessionFace) and %(sessionText)"
@@ -36,16 +55,16 @@ OnSakuraMenu : all {
 		"text %(_text)\n"
 	}*/
 	
-	"\n\n\![*]\q[Nevermind,OnMenuClose]"	
+	"\n\n[half]\![*]\q[Nevermind,OnMenuClose]"	
 }
 
 OnLastTalk {LastTalk}
 
 OnTalkRateChange{aitalkinterval = TOINT(reference0); OnSakuraMenu}
 OnToggleRain : all {
-	if rainVar == 1; rainVar = 0
-	else; rainVar = 1
-	"\![bind,rain,,%(rainVar)]"
+	rainType = reference0
+	if reference0 == "Off"; "\![bind,rain,,0]"
+	else; "\![bind,rain,%(reference0)]"
 	
 	OnSakuraMenu
 }

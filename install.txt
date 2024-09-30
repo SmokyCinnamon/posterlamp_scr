@@ -2,4 +2,4 @@ charset,UTF-8
 type,ghost
 
 name,Community Lamppost
-directory,posterlamp
+directory,posterlamp_scr

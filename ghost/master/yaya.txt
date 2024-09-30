@@ -13,7 +13,6 @@ dic, mouse.dic
 dic, meta.dic
 dic, other.dic
 dic, menu_sakura.dic
-dic, word.dic
 
 msglang,english
 

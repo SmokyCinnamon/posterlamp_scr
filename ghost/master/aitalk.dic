@@ -22,7 +22,7 @@ RandomTalk : nonoverlap_pool
 	"\0\s[0](That woman with the poster last week said her child ran away from home. But didn't I hear them saying she kicked them out...?)\w6\n\n(At least nobody can kick \f[italic,1]me\f[italic,0] out.)\e" //erm is this not a subject matter we should include .    idk it's "horror" ghost
 	"\0\s[0](Just the other day I saw that car. When will they ever replace the bumper?!)\e"
 	"\0\s[0](All these cars out so late... I wonder what they're up to?)\e"
-	"\0\s[0](\f[italic,1]Plink, plink, plink.\f[italic,0] Raiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiin.)\e"
+	"\0\s[0](\f[italic,1]Plink, plink, plink.\f[italic,0]\w6 Raiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiin.)\e"
 	"\0\s[0](I've become a man /\w3 who's forgotten all my senses /\w5 something about defenses...)\e" //fitting for the subject matter i guess. never discount what comes to you in a dream
 	"\0\s[0](I sure hope they never try to put an LED in here. I might actually die.)\e" //literally and jokingly?
 	"\0\s[0](Ah ah ah moths)\w6\n(Please go away moths or at least get eaten by the spider who has TAKEN UP RESIDENCE on me.)\e"
@@ -31,4 +31,11 @@ RandomTalk : nonoverlap_pool
 	"\0\s[0](I wish the posters would talk to me. Hellooooooooooo posters? Hello???)\e"
 	"\0\s[0](Magic would be so cool if it was real. I guess maybe something about energy and matter prevents that. But it could be like in dungeon meshi.)\e" //says the guy trapped in a lamppost
 	"\0\s[0](Whooosh. Yet another car by on the road. Maybe I should start keeping count...)\e"
+	"\0\s[0](I should write a book about this. If only I could find a pen...)\e" //that;s the least of your problems
+	"\0\s[0](My core is insulated so I guess I should be thankful for that. Unless they come to take the posters down... surely they wouldn't do that in the rain, though?)\e"
+	"\0\s[0](Ah how I do not miss walking dogs in the rain. Hope you're close to home, random citizen.)\e"
+	"\0\s[0](It's been so wet... somebody staple me the weather so I can see why!)\e" //staples would not work
+	"\0\s[0](Good thing it's not warm. Or if it was, that I slept through it.)\e"
+	"\0\s[0](I wonder how late it is...)\e"
+	"\0\s[0](Ah-ha! Third blue car this night!)\w6\n...\n(God, I wish I had anything else to do.)\e"
 }

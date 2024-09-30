@@ -2,6 +2,7 @@ OnFirstBoot
 {
 	//If you add variables, make sure to initialize them here!
 	LastTalk = ""
+	rainType = "Off"
 	sessionFace = ANY(facesPool)
 	sessionText = ANY(textPool)
 	
@@ -46,6 +47,7 @@ OnClose {
 OnNotifyDressupInfo : all {
 	facesPool = IARRAY
 	textPool = IARRAY
+	rainPool = IARRAY
 	dressupinfo = reference
 	//dressupinfo[0] = IARRAY //rain
 	//dressupinfo[0] = IARRAY //blank poster
@@ -54,6 +56,7 @@ OnNotifyDressupInfo : all {
 		_element = SPLIT(_element,"%(C_BYTE1)")
 		if _element[1] == "faces"; facesPool ,= _element[2]
 		elseif _element[1] == "text"; textPool ,= _element[2]
+		elseif _element[1] == "rain"; rainPool ,= _element[2]
 		else; continue
 	}
 }
