@@ -12,7 +12,7 @@ SakuraMenuGreetings : nonoverlap_pool {
 
 
 OnSakuraMenu : all {
-	"\![bind,faces,%(sessionFace),1]\![bind,text,%(sessionText),1]\![bind,poster,blank,1]"
+	"\![bind,poster,blank,1]"
 	"\0\s[0]\b2\![set,autoscroll,disable]\_q"
 	
 	if SHIORI3FW.Eventid == "OnMouseDoubleClick"; "%(SakuraMenuGreetings)"

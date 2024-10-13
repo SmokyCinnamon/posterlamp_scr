@@ -3,16 +3,19 @@ OnFirstBoot
 	//If you add variables, make sure to initialize them here!
 	LastTalk = ""
 	rainType = "Off"
-	sessionFace = ANY(facesPool)
-	sessionText = ANY(textPool)
+	
+	OnSetPools; --
+	//sessionFace = ANY(facesPool)
+	//sessionText = ANY(textPool)
 	
 	"\1\s[10]\0\s[0](It's the community lamppost.)\x[noclear]\n\n(It's full of 'missing' posters.)"
 }
 
 OnInitialize
 {
-	sessionFace = ANY(facesPool)
-	sessionText = ANY(textPool)
+	OnSetPools; --
+	//sessionFace = ANY(facesPool)
+	//sessionText = ANY(textPool)
 	//If you want some variables to reset on boot, put them here. This event will happen even if you add other events like OnGhostChanged
 	//OnInitialize is a NOTIFY event! That means it cannot return scripts. This event is only meant for things like variable changes. See this page on Ukadoc for more info: https://ukagakadreamteam.github.io/ukadoc/manual/spec_shiori3.html
 	
@@ -31,17 +34,24 @@ OnBoot {
 	"(It's the community lamppost.)"
 	"(Still covered in posters.)"
 	"(Maybe there's even a new one today...)"
-	"(Some of these numbers don't even go anywhere. How do you even type \m on the numpad?)"
+	"(Some of these numbers don't even go anywhere. How do you even type \_u[2425] on the numpad?)"
 }
 
 OnClose {
-	"\1\s[10]\0\s[0]\![bind,poster,blank,0]\![bind,faces,%(sessionFace),0]\![bind,text,%(sessionText),0]"; --
+	"\1\s[10]\0\s[0]\![bind,poster,blank,0]\![bind,faces,,0]\![bind,text,,0]"; --
 	"(Dawn is when I sleep.)"
 	"(No matter how strong my light, some days I worry I won't wake up.)"
 	"(I miss my heartbeat.)"
 	"(Oh, there comes someone now...)"
 	--
 	"\x\-"
+}
+
+OnSetPools {
+	sessionPosters = IARRAY
+	for _i = 0; _i <= 4; _i++ {
+		sessionPosters ,= "%ANY(facesPool)|%ANY(textPool)"
+	}
 }
 
 OnNotifyDressupInfo : all {
